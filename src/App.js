@@ -28,11 +28,11 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <h1>Pokemon-Cards</h1>
+    <div className="app-container">
+      <h1>Pokemon Kingdom .</h1>
 
-      <div>
-        <div>
+      <div className="pokemon-container">
+        <div className="all-container">
           {allPokemons.map((pokemon, index) => (
             <PokemonThumbnail
               id={pokemon.id}
@@ -57,7 +57,9 @@ function App() {
             />
           ))}
         </div>
-        <button onClick={() => getAllPokemons()}>More Pokemons</button>
+        <button className="load-more" onClick={() => getAllPokemons()}>
+          More Pokemons
+        </button>
       </div>
     </div>
   );
